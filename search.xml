@@ -172,7 +172,13 @@
 <p>我的Github地址:<br><a href="https://github.com/wsuo" target="_blank" rel="noopener">https://github.com/wsuo</a><br>我的个人网站地址:<br><a href="https://wsuo.github.io">https://wsuo.github.io</a></p>
 </blockquote>
 <p>参考文章：<br>1.<a href="https://cherryblog.site/Hexo-high-level-tutorialcloudmusic,bg-customthemes-statistical.html" target="_blank" rel="noopener">hexo高阶教程next主题优化</a><br>2.<a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a><br>3.<a href="https://www.dingxuewen.com/categories/Site/" target="_blank" rel="noopener">Hexo搭建博客的个性化设置</a><br>4.<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化</a><br>5.<a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></p>
-]]></content>
+<script src="https://utteranc.es/client.js"
+        repo="wsuo/utterances"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
       <categories>
         <category>technology</category>
       </categories>
