@@ -5,9 +5,9 @@
   <subtitle>It is never too old to learn.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://wsuo.github.io/"/>
   <updated>2020-02-01T13:09:50.843Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://wsuo.github.io/</id>
   
   <author>
     <name>王硕</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/02/01/hello-world/"/>
-    <id>http://yoursite.com/2020/02/01/hello-world/</id>
+    <link href="https://wsuo.github.io/2020/02/01/hello-world/"/>
+    <id>https://wsuo.github.io/2020/02/01/hello-world/</id>
     <published>2020-02-01T13:09:50.843Z</published>
     <updated>2020-02-01T13:09:50.843Z</updated>
     
