@@ -601,7 +601,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <!--<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+-->
 <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
 
   <span class="with-love">
@@ -846,9 +847,10 @@ show_date_time();
           repo: 'gitalk',
           owner: 'wsuo',
           admin: ['wsuo'],
-	  id:'_20200202210524',
-          //id:'location.pathname',
-          labels: '['Gitalk']'.split(',').filter(l => l),
+	  //id:'_20200202210524',
+          id:'location.pathname',
+          labels: 'gitalk',
+	  //.split(',').filter(l => l)
           perPage: 10,
           pagerDirection: 'last',
           createIssueManually: true,
