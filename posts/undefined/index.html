@@ -1222,15 +1222,17 @@ show_date_time();
           owner: 'wsuo',
           admin: ['wsuo'],
 	  //id:'_20200203141106',
-          id:'location.pathname',
-          labels: 'gitalk',
+          //id:'location.pathname',
+	  id: md5(location.pathname),	// ISSUE��location.href ����50���ַ� (Ӧ����Issue ���ݴ����ݿ�ı�ʶ�� ������ҳ�����޸�)
+          //labels: 'gitalk',
 	  //.split(',').filter(l => l)
+	  labels: 'gitalk'.split(',').filter(l => l),  // ��Ҫ�� labels��Ҫһ�����飬����ᱨ��
           perPage: 10,
           pagerDirection: 'last',
           createIssueManually: true,
           distractionFreeMode: true
         })
-        gitalk.render('gitalk-container')           
+        gitalk.render('gitalk-container');           
        </script>
 
 .gt-container a{border-bottom: none;}
