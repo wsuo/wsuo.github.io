@@ -1826,7 +1826,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8c54;
+  background: #e3a28c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3040,4 +3040,8 @@ pre .javascript .function {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
+}
+.gitalk-container {
+  max-width: 1080px;
+  margin: auto;
 }

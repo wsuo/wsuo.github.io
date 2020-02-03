@@ -365,6 +365,10 @@
             </div>
           </div>
         
+
+
+	
+
       </div>
       
       
@@ -383,18 +387,9 @@
           
 
   
-		<div class="comments" id="comments">
-      
-  <script src="https://utteranc.es/client.js"
-    repo="wsuo/utterances"
-    issue-term="pathname"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-
-		</div>
-
+	<div class="comments" id="comments">
+	<div id="gitalk-container"></div>
+    </div>
 
   
 
@@ -609,7 +604,7 @@ show_date_time();
 
         
 <div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -776,6 +771,29 @@ show_date_time();
 
 
 
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '5390e7612a0a84651118',
+          clientSecret: 'db8337be20de4b74087a527b9d3b8d95ed28d7aa',
+          repo: 'gitalk',
+          owner: 'wsuo',
+          admin: ['['wsuo']'],
+	  id:'_20200202210544',
+          //id:'location.pathname',
+          labels: '['Gitalk']'.split(',').filter(l => l),
+          perPage: 10,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: true
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
 
   
 
