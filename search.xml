@@ -4,7 +4,8 @@
     <title>图片测试</title>
     <url>/posts/21357.html</url>
     <content><![CDATA[<p>(C:\Users\13343\AppData\Roaming\Typora\typora-user-images\image-20200204223848834.png)</p>
-<p><img src="%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/image-20200204224148118.png" alt="image-20200204224148118"></p>
+<p><img src="/posts/assert/image-20200204224148118.png" alt="image-20200204224148118"></p>
+<p><img src="posts/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/image-20200204224148118.png" alt="image-20200204224148118"></p>
 ]]></content>
   </entry>
   <entry>
