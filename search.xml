@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>picturetest</title>
+    <url>/posts/37007.html</url>
+    <content><![CDATA[<p>测试:</p>
+<p>![</p>
+<p>](posts/picturetest/image-20200204224148118.png)</p>
+<p><img src="picturetest/image-20200204224148118.png" alt="image-20200204224148118"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>图片测试</title>
     <url>/posts/21357.html</url>
     <content><![CDATA[<p>(C:\Users\13343\AppData\Roaming\Typora\typora-user-images\image-20200204223848834.png)</p>
