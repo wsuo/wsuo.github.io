@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wsuo.github.io/"/>
-  <updated>2020-02-03T12:19:25.581Z</updated>
+  <updated>2020-02-04T02:28:12.374Z</updated>
   <id>https://wsuo.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论坛术语</title>
+    <link href="https://wsuo.github.io/posts/undefined/"/>
+    <id>https://wsuo.github.io/posts/undefined/</id>
+    <published>2020-02-04T02:25:49.000Z</published>
+    <updated>2020-02-04T02:28:12.374Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来："><a href="#下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来：" class="headerlink" title="下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来："></a>下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来：</h3><ul><li>RTFSC (Read the fucking source code)</li><li>RTFM (Read the fucking manual)</li><li>UTFH (“Use The Fucking Help”)</li><li>STFW (“Search The Fucking Web”)</li><li>STFG (“Search The Fucking Google” or “Search The Fantastic Google”)</li><li>GIYF (“Google Is Your Friend”)</li><li>JFGI (“Just Fucking Google It”)</li><li>UTSL (“Use The Source Luke”—alternately, RTFS)</li><li>RTFA (“Read The Fucking Article”—common on news forums such as Fark.com[3] and Slashdot)</li><li>RTFE (“Read The Fucking Email”)</li><li>RTFC (“Read The Fucking Code,” or “Reboot The Fucking Computer”)</li><li>RTFQ (“Read The Fucking Question”)</li><li>LMGTFY (“Let Me Google That For You”)</li><li>WIDGI (“When In Doubt Google It” - Also occasionally ‘WIDGIT’)</li><li>FIOTI (“Find It On The Internet”)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来：&quot;&gt;&lt;a href=&quot;#下面是经常见到的在一些问答网站回答的一些缩写，我觉得很有趣也很有用，在此将其列举出来：&quot; class=&quot;headerlink&quot; title=&quot;下面是经常见
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="https://wsuo.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="随笔" scheme="https://wsuo.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="有意思" scheme="https://wsuo.github.io/tags/%E6%9C%89%E6%84%8F%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo搭建个人博客网站</title>
