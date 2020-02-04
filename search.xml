@@ -6,7 +6,13 @@
     <content><![CDATA[<p>测试:</p>
 <p>![</p>
 <p>](posts/picturetest/image-20200204224148118.png)</p>
-<p><img src="picturetest/image-20200204224148118.png" alt="image-20200204224148118"></p>
+<p><img src="image-20200204224148118.png" alt=""></p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">&#123;<span class="symbol">%</span> asset_img <span class="built_in">image</span>-<span class="number">20200204224148118.</span>png This <span class="built_in">is</span> an <span class="built_in">image</span> <span class="symbol">%</span>&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>markdown: <img src="https://s2.ax1x.com/2020/02/05/1rmUZ8.png" alt="1rmUZ8.png"></p>
+<p>url: <a href="https://s2.ax1x.com/2020/02/05/1rmUZ8.png" target="_blank" rel="noopener">https://s2.ax1x.com/2020/02/05/1rmUZ8.png</a></p>
 ]]></content>
   </entry>
   <entry>
