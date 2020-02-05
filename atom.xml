@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wsuo.github.io/"/>
-  <updated>2020-02-04T23:36:34.046Z</updated>
+  <updated>2020-02-04T03:00:08.452Z</updated>
   <id>https://wsuo.github.io/</id>
   
   <author>
@@ -15,55 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>picturetest</title>
-    <link href="https://wsuo.github.io/posts/37007"/>
-    <id>https://wsuo.github.io/posts/37007</id>
-    <published>2020-02-04T23:22:41.000Z</published>
-    <updated>2020-02-04T23:36:34.046Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试:</p><p>![</p><p>](posts/picturetest/image-20200204224148118.png)</p><p><img src="image-20200204224148118.png" alt=""></p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">%</span> asset_img <span class="built_in">image</span>-<span class="number">20200204224148118.</span>png This <span class="built_in">is</span> an <span class="built_in">image</span> <span class="symbol">%</span>&#125;</span><br></pre></td></tr></table></figure><p>markdown: <img src="https://s2.ax1x.com/2020/02/05/1rmUZ8.png" alt="1rmUZ8.png"></p><p>url: <a href="https://s2.ax1x.com/2020/02/05/1rmUZ8.png" target="_blank" rel="noopener">https://s2.ax1x.com/2020/02/05/1rmUZ8.png</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;测试:&lt;/p&gt;
-&lt;p&gt;![&lt;/p&gt;
-&lt;p&gt;](posts/picturetest/image-20200204224148118.png)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image-20200204224148118.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;figure c
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>图片测试</title>
-    <link href="https://wsuo.github.io/posts/21357"/>
-    <id>https://wsuo.github.io/posts/21357</id>
-    <published>2020-02-04T14:38:27.000Z</published>
-    <updated>2020-02-04T22:56:10.310Z</updated>
-    
-    <content type="html"><![CDATA[<p>(C:\Users\13343\AppData\Roaming\Typora\typora-user-images\image-20200204223848834.png)</p><p><img src="/posts/assert/image-20200204224148118.png" alt="image-20200204224148118"></p><p><img src="/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/image-20200204224148118.png" alt="image-20200204224148118"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;(C:\Users\13343\AppData\Roaming\Typora\typora-user-images\image-20200204223848834.png)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/posts/assert/image-2020020422414
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>论坛术语</title>
