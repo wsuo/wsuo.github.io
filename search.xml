@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>IDEA 2020 破解方法</title>
+    <url>/posts/51649.html</url>
+    <content><![CDATA[<p>我上传到CSDN审核不通过…可能是天朝又加强版权管制了, 只能上传到自己的博客了.</p>
+<p>﻿### 一、IDEA破解</p>
+<h5 id="1-先上链接："><a href="#1-先上链接：" class="headerlink" title="1. 先上链接："></a>1. 先上链接：</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//IDEA的官方下载地址</span></span><br><span class="line">https:<span class="comment">//download.jetbrains.com/idea/ideaIU-2019.2.4.exe</span></span><br><span class="line"><span class="comment">//破解包的下载地址</span></span><br><span class="line">https:<span class="comment">//www.lanzous.com/i6ido6h</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.ax1x.com/2020/02/06/1yQFud.png" alt="1yQFud.png"></p>
+<h5 id="2-放的位置"><a href="#2-放的位置" class="headerlink" title="2. 放的位置"></a>2. 放的位置</h5><ul>
+<li><p>将破解包放置某个地方，复制绝对路径，本人还是以前一样放置于安装目录<code>/bin</code>  （地址自己清楚即可个人建议）</p>
+</li>
+<li><p>打开<code>c盘--用户--（对应用户的名字及计算机名字）</code>–找到   <code>.IntelliJIdea2019.2</code>   文件夹  即可</p>
+</li>
+<li><p>打开config</p>
+</li>
+<li><p>编辑   idea64.exe.vmoptions  最后一行添加</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//括号内是你的破解包内的绝对地址填写你自己的</span></span><br><span class="line">-javaagent:【D:\develop\IntelliJ IDEA <span class="number">2019.2</span><span class="number">.4</span>\bin\jetbrains-agent.jar】</span><br></pre></td></tr></table></figure>
+<h5 id="3-打开IDEA"><a href="#3-打开IDEA" class="headerlink" title="3. 打开IDEA"></a>3. 打开IDEA</h5><blockquote>
+<p>和以前的一样了，打开 idea 配置请选择  <code>Activation Cod</code>e 将破解包中 Activation_Code内的码复制到文本框即可<br><img src="https://s2.ax1x.com/2020/02/06/1yQPjH.png" alt="1yQPjH.png"></p>
+</blockquote>
+<h3 id="二、结束"><a href="#二、结束" class="headerlink" title="二、结束"></a>二、结束</h3><p><img src="https://s2.ax1x.com/2020/02/06/1yQCge.png" alt="1yQCge.png"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">如若侵权， 请版主删除谢谢！</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>破解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>动态规划问题</title>
     <url>/posts/34462.html</url>
     <content><![CDATA[<p>﻿<code>前言的前言：</code>本篇文章较长，请择需阅读，右边（或左边）有目录，我也根据内容对目录做了详细的划分，本文参考网上各大博客再加上自己的总结，将我认为最有用最容易理解的部分整合到了一起，希望对你有所帮助！</p>
