@@ -68,13 +68,9 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
       </tags>
   </entry>
   <entry>
-    <title>JDK的配置</title>
+    <title>JDK</title>
     <url>/posts/38968.html</url>
-    <content><![CDATA[<hr>
-<p>title：JDK配置<br>tags：<br>    - jdk</p>
-<p>categories：<br>    - 其他</p>
-<hr>
-<p>首先，在官网下载 JDK：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle 官网</a></p>
+    <content><![CDATA[<p>首先，在官网下载 JDK：<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Oracle 官网</a></p>
 <p><img src="https://s2.ax1x.com/2020/02/08/12XD7d.png" alt="12XD7d.png"></p>
 <p>如上图所示，在 Oracle 官网下载 JDK，有一点需要注意，那就是在我们下载合适的 JDK 之前，需要先点击 <strong>标记 1</strong> 所在的按钮，选择接受。否则的话，直接点击 JDK 进行下载的时候，将会弹出如下界面：</p>
 <p><img src="https://s2.ax1x.com/2020/02/08/12X0ne.png" alt="12X0ne.png"></p>
@@ -117,6 +113,12 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
 <p><img src="https://s2.ax1x.com/2020/02/08/12X7hq.png" alt="12X7hq.png"></p>
 <p>观察运行结果，显然我们的环境变量配置成功啦！</p>
 ]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
+      </tags>
   </entry>
   <entry>
     <title>IDEA 2020 破解方法</title>
