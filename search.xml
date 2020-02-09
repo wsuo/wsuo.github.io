@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何科学上网</title>
+    <url>/posts/29590.html</url>
+    <content><![CDATA[<h3 id="经过我的不懈努力，终于找到一个白嫖的方法实现科学上网了。"><a href="#经过我的不懈努力，终于找到一个白嫖的方法实现科学上网了。" class="headerlink" title="经过我的不懈努力，终于找到一个白嫖的方法实现科学上网了。"></a>经过我的不懈努力，终于找到一个白嫖的方法实现科学上网了。</h3><p>废话不多说，开始介绍：</p>
+<p>我这几天逛某hub的时候很卡，卡到头痛（GitHub），于是想挂个VPN，于是用Google搜一下，没错我一直都有个梯子，不过特别慢。搜出了许多，折腾了半天，大部分都要钱，不要钱的还要海外的银行卡号，要钱的还很贵，一个月60大洋，在天朝习惯了白嫖的我怎么可能给他这个钱。</p>
+<p><strong>于是，就有了下文：</strong></p>
+<ul>
+<li>先上链接：</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/glados-network/</span>GLaDOS</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>但是，注册这个账户必须要有邀请码，不过我可以给你：</li>
+</ul>
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">H<span class="number">5</span>OJT-FD<span class="name">M1</span>R-IUZW<span class="number">3</span>-<span class="meta">O2</span>HE<span class="symbol">N</span></span><br></pre></td></tr></table></figure>
+
+<p>不然是没有办法激活的。</p>
+<p><img src="https://s2.ax1x.com/2020/02/09/1f6lpn.png" alt="1f6lpn.png"></p>
+<p>如图，虽然网页看起来很复杂，但是你都不用管，只需要点击window下载就好了，Mac的点Mac下载。</p>
+<p><img src="https://s2.ax1x.com/2020/02/09/1f6KYj.png" alt="1f6KYj.png"></p>
+<hr>
+<p>然后下载好勾选上 system proxy 模式：</p>
+<p><img src="https://s2.ax1x.com/2020/02/09/1f6Mfs.png" alt="1f6Mfs.png"></p>
+<hr>
+<p>然后把他给你的URL复制到制定位置：</p>
+<p><img src="https://s2.ax1x.com/2020/02/09/1f6atJ.png" alt="1f6atJ.png"><br>URL：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//g</span>lados-subscribe.com<span class="regexp">/clash/</span><span class="number">30512</span><span class="regexp">/e51fdd0/</span><span class="number">35484</span><span class="regexp">/glados.yaml</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2020/02/09/1f6360.png" alt="1f6360.png"></p>
+<p>然后就大工告成了！</p>
+<blockquote>
+<p>我下载了window和安卓的客户端试了一下，油管的1080不卡，太爽了。。。</p>
+<p>好了，下面的你们自己去探索吧。</p>
+</blockquote>
+<p>有问题在下方留言鸭</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Git简要教程</title>
     <url>/posts/37271.html</url>
     <content><![CDATA[<h1 id="Git-简要教程"><a href="#Git-简要教程" class="headerlink" title="Git 简要教程"></a>Git 简要教程</h1><p>##引言</p>
