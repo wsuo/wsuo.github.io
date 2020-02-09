@@ -485,7 +485,7 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
 <p>如果你要练习，可以去 leetcode，选择动态规划专题，然后连续刷几十道，保证你以后再也不怕动态规划了。<del>当然，遇到很难的，咱该挂的还是得挂。</del> </p>
 <p>OKOKOKOKOOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOKOK</p>
 <hr>
-<p>到现在为止你已经是一名动态规划初级选手了，要想进阶到中级选手必须<a href="https://wsuo.github.io/">充钱</a><br>[狗头]。</p>
+<p>到现在为止你已经是一名动态规划初级选手了，要想进阶到中级选手必须<a href="https://wsuo.github.io/" target="_blank" rel="noopener">充钱</a><br>[狗头]。</p>
 <p>开玩笑的，要想进阶必须学习<del>油画</del> ！！！<br>呸，<strong>优化</strong>。</p>
 <h3 id="另一种思路"><a href="#另一种思路" class="headerlink" title="另一种思路"></a>另一种思路</h3><p>好了，我相信这种思路你已经掌握了，我们还有另一种思路解决问题，就是我在前面提到的——两种方法：</p>
 <ul>
@@ -870,7 +870,7 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
 <h4 id="2-作者总结"><a href="#2-作者总结" class="headerlink" title="2. 作者总结"></a>2. 作者总结</h4><blockquote>
 <p>上面的这些题，基本都是不怎么难的入门题，除了最后一道相对难一点。并且基本 80% 的二维矩阵 dp 都可以像上面的方法一样优化成一维矩阵的dp，核心就是要画图，看他们的值依赖，当然，还有很多其他比较难的优化，但是，我遇到的题中，大部分都是我上面这种类型的优化。</p>
 </blockquote>
-<p>所以说，看完我写的这篇文章是一个什么水平呢？毫不夸张的说，你对于动态规划乃至于算法已经<code>入门</code>了，恭喜，以后还有更多更难的题目等着你，更多关于技术的分享文章，请<a href="https://wsuo.github.io/">点击</a>。</p>
+<p>所以说，看完我写的这篇文章是一个什么水平呢？毫不夸张的说，你对于动态规划乃至于算法已经<code>入门</code>了，恭喜，以后还有更多更难的题目等着你，更多关于技术的分享文章，请<a href="https://wsuo.github.io/" target="_blank" rel="noopener">点击</a>。</p>
 <p>最后谢谢你的观看。</p>
 <hr>
 <p>参考文章：<br><a href="https://leetcode-cn.com/problems/edit-distance/" target="_blank" rel="noopener">1、力扣：72.编辑距离</a><br><a href="https://leetcode-cn.com/problems/unique-paths/" target="_blank" rel="noopener">2、力扣：62.不同路径</a><br><a href="https://juejin.im/post/5d556b7ef265da03aa2568d5#heading-8" target="_blank" rel="noopener">3、动态规划套路详解</a><br><a href="https://blog.csdn.net/u013309870/article/details/75193592" target="_blank" rel="noopener">4、算法-动态规划 Dynamic Programming–从菜鸟到老鸟</a><br><a href="https://zhuanlan.zhihu.com/p/91582909?utm_source=qq&utm_medium=social&utm_oi=1116438468829691904" target="_blank" rel="noopener">5、告别动态规划，连刷 40 道题，我总结了这些套路，看不懂你打我</a><br><a href="https://blog.csdn.net/mu399/article/details/7722810" target="_blank" rel="noopener">6、动态规划之01背包问题（最易理解的讲解）</a><br><a href="https://zhuanlan.zhihu.com/p/30959069" target="_blank" rel="noopener">7、0-1背包问题的动态规划算法</a></p>
@@ -962,7 +962,7 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git<span class="meta">@github</span>.com:wsuo/wsuo.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>这里根据自己的地址来配置即可，配置完成后，执行如下命令：<br>在<strong>站点目录下</strong>还要在 <strong>hexo init 的根目录下</strong>执行输入下面的插件安装：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">然后启动:</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>执行完成后，就可以将数据上传到 GitHub 了<br>上传成功后，访问 <a href="https://wsuo.github.io">https://wsuo.github.io</a> 就可以看到自己的个人站点了，这是 GitHub 默认给我们提供的域名。<br>如果你对 GitHub 提供的域名不满意，也可以自己申请一个域名，分分钟就配置好了。</p>
+<p>执行完成后，就可以将数据上传到 GitHub 了<br>上传成功后，访问 <a href="https://wsuo.github.io" target="_blank" rel="noopener">https://wsuo.github.io</a> 就可以看到自己的个人站点了，这是 GitHub 默认给我们提供的域名。<br>如果你对 GitHub 提供的域名不满意，也可以自己申请一个域名，分分钟就配置好了。</p>
 <p>如果你访问不了你的博客:</p>
 <blockquote>
 <p>登陆GitHub查看仓库的setting,然后往下翻找到github pages,有一个蓝色的网址点击,那个就是了.</p>
@@ -1159,7 +1159,7 @@ git config --global user.email &quot;john@example.com&quot;  #设置自己的邮
 <p>解决方案：</p>
 <h2 id="七、结语"><a href="#七、结语" class="headerlink" title="七、结语"></a>七、结语</h2><p>第一篇两万字的博客，终于码完了，虽然最后很多功能我自己也没有实现，因为很多用不到来的功能，但是为了方便大家也都列出来了，如果你对我的文章感兴趣，欢迎留言或者私信我.</p>
 <blockquote>
-<p>我的Github地址:<br><a href="https://github.com/wsuo" target="_blank" rel="noopener">https://github.com/wsuo</a><br>我的个人网站地址:<br><a href="https://wsuo.github.io">https://wsuo.github.io</a></p>
+<p>我的Github地址:<br><a href="https://github.com/wsuo" target="_blank" rel="noopener">https://github.com/wsuo</a><br>我的个人网站地址:<br><a href="https://wsuo.github.io" target="_blank" rel="noopener">https://wsuo.github.io</a></p>
 </blockquote>
 <p>参考文章：<br>1.<a href="https://cherryblog.site/Hexo-high-level-tutorialcloudmusic,bg-customthemes-statistical.html" target="_blank" rel="noopener">hexo高阶教程next主题优化</a><br>2.<a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a><br>3.<a href="https://www.dingxuewen.com/categories/Site/" target="_blank" rel="noopener">Hexo搭建博客的个性化设置</a><br>4.<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化</a><br>5.<a href="http://eternalzttz.com/hexo-next.html" target="_blank" rel="noopener">hexo next主题优化，打造个人精致网站</a></p>
 ]]></content>
