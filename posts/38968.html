@@ -181,7 +181,18 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "e12c868c"
+    });
+  daovoice('update');
+  </script>
 
+
+
+<!-- ��ҳ������ -->
+<script src="https://neveryu.github.io/js/src/pace.min.js"></script>
 
   <title>JDK | winthorp</title>
   
@@ -239,42 +250,62 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-首页">
           <a href="/" rel="section">
             
-            Home
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-我的简介">
           <a href="/about/" rel="section">
             
-            About
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我的简介
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-博客标签">
           <a href="/tags/" rel="section">
             
-            Tags
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            博客标签
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-文章分类">
           <a href="/categories/" rel="section">
             
-            Categories
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            文章分类
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-归档">
           <a href="/archives/" rel="section">
             
-            Archives
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-相册">
+          <a href="/photo/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            相册
           </a>
         </li>
       
@@ -284,6 +315,8 @@
           
             <a href="javascript:;" class="popup-trigger">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             Search
           </a>
@@ -420,6 +453,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/38968#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/posts/38968" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -539,19 +582,11 @@
 
 
     
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wx.jpg" alt="wsuo wechat" style="width: 200px; max-width: 100%;"/>
-    <div>俺的WX</div>
-</div>
-
-      </div>
-    
 
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>觉得文章对您有帮助请我喝杯咖啡吧^_^</div>
+  <div>觉得文章对您有帮助请我喝杯奶茶吧^_^</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -658,11 +693,10 @@
           
 
   
-	<div class="comments" id="comments">
-	<div id="gitalk-container"></div>
+    <div class="comments" id="comments">
     </div>
-
-  
+<!--
+	
 
 
 
@@ -705,7 +739,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives">
               
                   <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
@@ -750,25 +784,33 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/wsuo" target="_blank" title="GitHub">
+
+
+
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://segmentfault.com/u/wangshuo_5e379fd4e11e8" target="_blank" title="segmentfault">
+
+
+
                       
                         <i class="fa fa-fw fa-facebook"></i>segmentfault</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://leetcode-cn.com/u/wsuo/" target="_blank" title="LeetCode">
+
+
+
                       
                         <i class="fa fa-fw fa-stack-overflow"></i>LeetCode</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://blog.csdn.net/weixin_43941364" target="_blank" title="CSDN">
+
+
+
                       
                         <i class="fa fa-fw fa-instagram"></i>CSDN</a>
                   </span>
@@ -778,6 +820,8 @@
 
           
           
+
+
 
           
           
@@ -811,10 +855,16 @@
         <!--<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 -->
 <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-
+<!--
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
+-->
+
+  <span class="with-love" id="animate" style="font-size: 13px">
+	<i class="fa fa-heart"></i>
+  </span>
+
 
   <span class="author" itemprop="copyrightHolder">wangshuo</span>
 
@@ -894,6 +944,10 @@ show_date_time();
     </span>
   
 </div>
+
+
+
+
 
 
 
@@ -1035,31 +1089,30 @@ show_date_time();
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: '1Eu9zO3L7hMHe42v0OSjLzCB-gzGzoHsz',
+        appKey: 'jVs3QBUljb0042G0RSRUugB6',
+        placeholder: '请畅所欲言',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 <script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '5390e7612a0a84651118',
-          clientSecret: 'db8337be20de4b74087a527b9d3b8d95ed28d7aa',
-          repo: 'gitalk',
-          owner: 'wsuo',
-          admin: ['wsuo'],
-	  //id:'_20200207172032',
-          //id:'',
-	  id: md5(location.pathname),	// ISSUE��location.href ����50���ַ� (Ӧ����Issue ���ݴ����ݿ�ı�ʶ�� ������ҳ�����޸�)
-          //labels: 'gitalk',
-	  //.split(',').filter(l => l)
-	  labels: 'gitalk'.split(',').filter(l => l),  // ��Ҫ�� labels��Ҫһ�����飬����ᱨ��
-          perPage: 10,
-          pagerDirection: 'last',
-          createIssueManually: true,
-          distractionFreeMode: true
-        })
-        gitalk.render('gitalk-container');           
-       </script>
 
   
 
@@ -1415,7 +1468,7 @@ show_date_time();
   
 
 
-<!-- ����鸴�ƹ��� -->
+<!-- 代码块复制功能 -->
 <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
 <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 
