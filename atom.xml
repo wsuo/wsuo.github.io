@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wsuo.top/"/>
-  <updated>2020-04-03T06:33:06.457Z</updated>
+  <updated>2020-04-13T02:27:53.776Z</updated>
   <id>http://wsuo.top/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Git简要教程</title>
-    <link href="http://wsuo.top/2020/04/03/Git%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/"/>
-    <id>http://wsuo.top/2020/04/03/Git%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/</id>
-    <published>2020-04-03T06:29:51.000Z</published>
-    <updated>2020-04-03T06:33:06.457Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Git-简要教程"><a href="#Git-简要教程" class="headerlink" title="Git 简要教程"></a>Git 简要教程</h1><p>##引言</p><p>鉴于使用Git有一点点门槛（比SVN稍微高一点），我写了个实用教程，如果想更进一步了解Git，或者觉得我写的太懶，推荐参考书 <a href="http://git-scm.com/book/zh" target="_blank" rel="noopener">Progit</a>，这本书是开源的，前四章就足够用了。</p><p>至于为什么要使用版本控制，主要是为了方便团队合作以及代码管理，并且每个人都可以知道其他人在某一段时间对代码做出了怎样的修改，这个对于Debug非常重要，另外，也能方便地进行代码质量控制，写的难看的代码是会被别人看到并吐槽的…… ( git 有一个 git blame，可以知道任意一行代码是谁写的 - - )</p><h2 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h2><p>官网下载，然后安装，完。</p><hr><h2 id="初始配置"><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2><pre><code>git config --global user.name &quot;John Doe&quot;  #设置自己的用户名git config --global user.email &quot;john@example.com&quot;  #设置自己的邮件地址</code></pre><p>一般到这里就足够了，我个人还打开了自动色彩的支持，这样做代码对比的时候比较好看些。这些配置最终是写到 ~/.gitconfig 里的</p><h2 id="Git基础操作"><a href="#Git基础操作" class="headerlink" title="Git基础操作"></a>Git基础操作</h2><p>初始化一个仓库: <code>git init</code>， 此后就可以运行各类git命令了</p><p>最常用的几个命令：</p><ol><li><code>git status</code> 查看仓库当前状态</li><li><code>git add some_file</code> 将某个文件加入版本系统，或缓存（后文会具体描述</li><li><code>git commit -m &quot;i did some changes</code> 进行一次提交，Git是本地提交，不要求连网</li><li><code>git push origin master</code> 将本地的master分支推送到origin服务器的master分支</li><li><code>git pull origin master</code> 将服务器上的master分支同步到本地</li></ol><h2 id="Git文件的三状态模型"><a href="#Git文件的三状态模型" class="headerlink" title="Git文件的三状态模型"></a>Git文件的三状态模型</h2><p>Git中的文件有三个状态：</p><ol><li>untracked : Git不会管理这个文件，默认是这个状态</li><li>unstaged: 当对一个被track的文件进行改动后即为此状态，Git默认不会对此状态的文件进行提交</li><li>staged: Git已经缓存这个文件的修改，提交时将永久保存</li></ol><p>三个状态比SVN的两个状态略复杂一些，但是实际应用中灵活性好很多。</p><p>对于一个 unstaged 的文件，使用 <code>git add file</code> 将其转为 staged 态，有一个技巧，就是在提交的时候，使用 <code>git commit -a -m &quot;some ooxx&quot;</code>，Git会自动对unstaged的文件执行add操作。</p><h2 id="一个简单的开发流程"><a href="#一个简单的开发流程" class="headerlink" title="一个简单的开发流程"></a>一个简单的开发流程</h2><p>以组内的TinyOS代码开发为例</p><ol><li><code>git clone git@git.thunics.org:tinyos.git</code> 这一步将服务器上的仓库 clone 下来</li><li><code>cd tinyos</code></li><li>写代码，测试，调试，写代码，写代码，终于写完了</li><li>如果写代码过程中有新建文件，则使用 <code>git add file</code> 让git去track它，否则/然后 <code>git commit -a -m &quot;我写了一些代码&quot;</code> 提交即可</li><li>如果还要写代码，则返回前两步，否则将代码同步到服务器</li><li><code>git pull origin master</code> 在推送之前先看看别人有没有提交代码，同步下来，这是个好习惯</li><li><code>git push origin master</code> OK，就这么简单。</li></ol><p>需要明确注意的一点是在 pull 的时候，别人写的代码可能跟自己的会有冲突，git会把双方的代码 都放在一个文件里，并警报，这时 <strong>一定要打开文件去手动解决冲突</strong> ！冲突解决完了再提交一次，然后push。</p><h2 id="一个更规范的开发流程"><a href="#一个更规范的开发流程" class="headerlink" title="一个更规范的开发流程"></a>一个更规范的开发流程</h2><p>上一节讲到的开发流程是都在 master 分支下进行的，这个不是很利于代码的维护以及仓库的整洁（虽然他是可行的），一个更好的方式是，本地有 master 和 dev 两个分支，每次都在 dev 分支下修改和提交，在master分支合并dev的修改并推送到服务器。所以开发流程修改为：</p><ol><li><code>git clone git@git.thunics.org:tinyos.git</code> 这一步将服务器上的仓库 clone 下来</li><li><code>cd tinyos</code></li><li><code>git branch dev</code> 新建dev分支，一次即可</li><li><code>git checkout dev</code> 切换到dev分支</li><li>写代码，测试，调试，写代码，写代码，终于写完了</li><li>如果写代码过程中有新建文件，则使用 <code>git add file</code> 让git去track它，否则/然后 <code>git commit -a -m &quot;我写了一些代码&quot;</code> 提交即可</li><li>如果还要写代码，则返回前两步，进行下一步</li><li><code>git checkout master</code> 切换回master分支</li><li><code>git pull origin master</code> 同步其他人的代码，可能处理冲突</li><li><code>git merge dev</code> 将自己的修改合并进来，可能需要处理冲突</li><li><code>git push origin master</code></li></ol><p>这样一次开发就完成了，下次还要回dev分支，就 <code>git checkout dev</code> ，并且 <code>git merge master</code>，将其他人的代码合并进来，这里一般不会有冲突 //因为之前已经处理过一次。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>得益于活跃的社区，Git 有一大票参考资料，而且几乎都有中文版，在此推荐：</p><ol><li><strong>Pro Git</strong>: 楼主的入门教材，Git社区官方推荐的开源书籍，官网喜迎十八大中，pdf放在了 samba的 <em>Documents/WSN小组资料</em> 中</li><li><strong>Git Magic</strong>: <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" target="_blank" rel="noopener">链接</a> Yet Another 经典教程</li><li><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="noopener">阮一峰: Git分支管理策略</a></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Git-简要教程&quot;&gt;&lt;a href=&quot;#Git-简要教程&quot; class=&quot;headerlink&quot; title=&quot;Git 简要教程&quot;&gt;&lt;/a&gt;Git 简要教程&lt;/h1&gt;&lt;p&gt;##引言&lt;/p&gt;
-&lt;p&gt;鉴于使用Git有一点点门槛（比SVN稍微高一点），我写了个实用教程，
-      
-    
-    </summary>
-    
-    
-      <category term="technology" scheme="http://wsuo.top/categories/technology/"/>
-    
-    
-      <category term="Git" scheme="http://wsuo.top/tags/Git/"/>
-    
-  </entry>
   
   <entry>
     <title>Hexo搭建个人博客网站</title>
@@ -72,6 +45,61 @@
     
     
       <category term="hexo" scheme="http://wsuo.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA 2020 破解方法</title>
+    <link href="http://wsuo.top/2020/04/03/IDEA%202020%E6%9C%80%E6%96%B0%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
+    <id>http://wsuo.top/2020/04/03/IDEA%202020%E6%9C%80%E6%96%B0%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</id>
+    <published>2020-04-03T06:29:51.000Z</published>
+    <updated>2020-04-03T06:33:20.785Z</updated>
+    
+    <content type="html"><![CDATA[<p>我上传到CSDN审核不通过…可能是天朝又加强版权管制了, 只能上传到自己的博客了.</p><p>﻿### 一、IDEA破解</p><h5 id="1-先上链接："><a href="#1-先上链接：" class="headerlink" title="1. 先上链接："></a>1. 先上链接：</h5><pre><code class="java">//IDEA的官方下载地址https://download.jetbrains.com/idea/ideaIU-2019.2.4.exe//破解包的下载地址https://www.lanzous.com/i6ido6h</code></pre><p><img src="https://s2.ax1x.com/2020/02/06/1yQFud.png" alt="1yQFud.png"></p><h5 id="2-放的位置"><a href="#2-放的位置" class="headerlink" title="2. 放的位置"></a>2. 放的位置</h5><ul><li><p>将破解包放置某个地方，复制绝对路径，本人还是以前一样放置于安装目录<code>/bin</code>  （地址自己清楚即可个人建议）</p></li><li><p>打开<code>c盘--用户--（对应用户的名字及计算机名字）</code>–找到   <code>.IntelliJIdea2019.2</code>   文件夹  即可</p></li><li><p>打开config</p></li><li><p>编辑   idea64.exe.vmoptions  最后一行添加</p></li></ul><pre><code class="java">//括号内是你的破解包内的绝对地址填写你自己的-javaagent:【D:\develop\IntelliJ IDEA 2019.2.4\bin\jetbrains-agent.jar】</code></pre><h5 id="3-打开IDEA"><a href="#3-打开IDEA" class="headerlink" title="3. 打开IDEA"></a>3. 打开IDEA</h5><blockquote><p>和以前的一样了，打开 idea 配置请选择  <code>Activation Cod</code>e 将破解包中 Activation_Code内的码复制到文本框即可<br><img src="https://s2.ax1x.com/2020/02/06/1yQPjH.png" alt="1yQPjH.png"></p></blockquote><h3 id="二、结束"><a href="#二、结束" class="headerlink" title="二、结束"></a>二、结束</h3><p><img src="https://s2.ax1x.com/2020/02/06/1yQCge.png" alt="1yQCge.png"></p><pre><code class="java">如若侵权， 请版主删除谢谢！</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我上传到CSDN审核不通过…可能是天朝又加强版权管制了, 只能上传到自己的博客了.&lt;/p&gt;
+&lt;p&gt;﻿### 一、IDEA破解&lt;/p&gt;
+&lt;h5 id=&quot;1-先上链接：&quot;&gt;&lt;a href=&quot;#1-先上链接：&quot; class=&quot;headerlink&quot; title=&quot;1. 先上链接：
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://wsuo.top/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="破解" scheme="http://wsuo.top/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git简要教程</title>
+    <link href="http://wsuo.top/2020/04/03/Git%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/"/>
+    <id>http://wsuo.top/2020/04/03/Git%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/</id>
+    <published>2020-04-03T06:29:51.000Z</published>
+    <updated>2020-04-03T06:33:06.457Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Git-简要教程"><a href="#Git-简要教程" class="headerlink" title="Git 简要教程"></a>Git 简要教程</h1><p>##引言</p><p>鉴于使用Git有一点点门槛（比SVN稍微高一点），我写了个实用教程，如果想更进一步了解Git，或者觉得我写的太懶，推荐参考书 <a href="http://git-scm.com/book/zh" target="_blank" rel="noopener">Progit</a>，这本书是开源的，前四章就足够用了。</p><p>至于为什么要使用版本控制，主要是为了方便团队合作以及代码管理，并且每个人都可以知道其他人在某一段时间对代码做出了怎样的修改，这个对于Debug非常重要，另外，也能方便地进行代码质量控制，写的难看的代码是会被别人看到并吐槽的…… ( git 有一个 git blame，可以知道任意一行代码是谁写的 - - )</p><h2 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h2><p>官网下载，然后安装，完。</p><hr><h2 id="初始配置"><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2><pre><code>git config --global user.name &quot;John Doe&quot;  #设置自己的用户名git config --global user.email &quot;john@example.com&quot;  #设置自己的邮件地址</code></pre><p>一般到这里就足够了，我个人还打开了自动色彩的支持，这样做代码对比的时候比较好看些。这些配置最终是写到 ~/.gitconfig 里的</p><h2 id="Git基础操作"><a href="#Git基础操作" class="headerlink" title="Git基础操作"></a>Git基础操作</h2><p>初始化一个仓库: <code>git init</code>， 此后就可以运行各类git命令了</p><p>最常用的几个命令：</p><ol><li><code>git status</code> 查看仓库当前状态</li><li><code>git add some_file</code> 将某个文件加入版本系统，或缓存（后文会具体描述</li><li><code>git commit -m &quot;i did some changes</code> 进行一次提交，Git是本地提交，不要求连网</li><li><code>git push origin master</code> 将本地的master分支推送到origin服务器的master分支</li><li><code>git pull origin master</code> 将服务器上的master分支同步到本地</li></ol><h2 id="Git文件的三状态模型"><a href="#Git文件的三状态模型" class="headerlink" title="Git文件的三状态模型"></a>Git文件的三状态模型</h2><p>Git中的文件有三个状态：</p><ol><li>untracked : Git不会管理这个文件，默认是这个状态</li><li>unstaged: 当对一个被track的文件进行改动后即为此状态，Git默认不会对此状态的文件进行提交</li><li>staged: Git已经缓存这个文件的修改，提交时将永久保存</li></ol><p>三个状态比SVN的两个状态略复杂一些，但是实际应用中灵活性好很多。</p><p>对于一个 unstaged 的文件，使用 <code>git add file</code> 将其转为 staged 态，有一个技巧，就是在提交的时候，使用 <code>git commit -a -m &quot;some ooxx&quot;</code>，Git会自动对unstaged的文件执行add操作。</p><h2 id="一个简单的开发流程"><a href="#一个简单的开发流程" class="headerlink" title="一个简单的开发流程"></a>一个简单的开发流程</h2><p>以组内的TinyOS代码开发为例</p><ol><li><code>git clone git@git.thunics.org:tinyos.git</code> 这一步将服务器上的仓库 clone 下来</li><li><code>cd tinyos</code></li><li>写代码，测试，调试，写代码，写代码，终于写完了</li><li>如果写代码过程中有新建文件，则使用 <code>git add file</code> 让git去track它，否则/然后 <code>git commit -a -m &quot;我写了一些代码&quot;</code> 提交即可</li><li>如果还要写代码，则返回前两步，否则将代码同步到服务器</li><li><code>git pull origin master</code> 在推送之前先看看别人有没有提交代码，同步下来，这是个好习惯</li><li><code>git push origin master</code> OK，就这么简单。</li></ol><p>需要明确注意的一点是在 pull 的时候，别人写的代码可能跟自己的会有冲突，git会把双方的代码 都放在一个文件里，并警报，这时 <strong>一定要打开文件去手动解决冲突</strong> ！冲突解决完了再提交一次，然后push。</p><h2 id="一个更规范的开发流程"><a href="#一个更规范的开发流程" class="headerlink" title="一个更规范的开发流程"></a>一个更规范的开发流程</h2><p>上一节讲到的开发流程是都在 master 分支下进行的，这个不是很利于代码的维护以及仓库的整洁（虽然他是可行的），一个更好的方式是，本地有 master 和 dev 两个分支，每次都在 dev 分支下修改和提交，在master分支合并dev的修改并推送到服务器。所以开发流程修改为：</p><ol><li><code>git clone git@git.thunics.org:tinyos.git</code> 这一步将服务器上的仓库 clone 下来</li><li><code>cd tinyos</code></li><li><code>git branch dev</code> 新建dev分支，一次即可</li><li><code>git checkout dev</code> 切换到dev分支</li><li>写代码，测试，调试，写代码，写代码，终于写完了</li><li>如果写代码过程中有新建文件，则使用 <code>git add file</code> 让git去track它，否则/然后 <code>git commit -a -m &quot;我写了一些代码&quot;</code> 提交即可</li><li>如果还要写代码，则返回前两步，进行下一步</li><li><code>git checkout master</code> 切换回master分支</li><li><code>git pull origin master</code> 同步其他人的代码，可能处理冲突</li><li><code>git merge dev</code> 将自己的修改合并进来，可能需要处理冲突</li><li><code>git push origin master</code></li></ol><p>这样一次开发就完成了，下次还要回dev分支，就 <code>git checkout dev</code> ，并且 <code>git merge master</code>，将其他人的代码合并进来，这里一般不会有冲突 //因为之前已经处理过一次。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>得益于活跃的社区，Git 有一大票参考资料，而且几乎都有中文版，在此推荐：</p><ol><li><strong>Pro Git</strong>: 楼主的入门教材，Git社区官方推荐的开源书籍，官网喜迎十八大中，pdf放在了 samba的 <em>Documents/WSN小组资料</em> 中</li><li><strong>Git Magic</strong>: <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" target="_blank" rel="noopener">链接</a> Yet Another 经典教程</li><li><a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank" rel="noopener">阮一峰: Git分支管理策略</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Git-简要教程&quot;&gt;&lt;a href=&quot;#Git-简要教程&quot; class=&quot;headerlink&quot; title=&quot;Git 简要教程&quot;&gt;&lt;/a&gt;Git 简要教程&lt;/h1&gt;&lt;p&gt;##引言&lt;/p&gt;
+&lt;p&gt;鉴于使用Git有一点点门槛（比SVN稍微高一点），我写了个实用教程，
+      
+    
+    </summary>
+    
+    
+      <category term="technology" scheme="http://wsuo.top/categories/technology/"/>
+    
+    
+      <category term="Git" scheme="http://wsuo.top/tags/Git/"/>
     
   </entry>
   
@@ -130,34 +158,6 @@
       <category term="数据结构" scheme="http://wsuo.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="动态规划" scheme="http://wsuo.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA 2020 破解方法</title>
-    <link href="http://wsuo.top/2020/04/03/IDEA%202020%E6%9C%80%E6%96%B0%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/"/>
-    <id>http://wsuo.top/2020/04/03/IDEA%202020%E6%9C%80%E6%96%B0%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/</id>
-    <published>2020-04-03T06:29:51.000Z</published>
-    <updated>2020-04-03T06:33:20.785Z</updated>
-    
-    <content type="html"><![CDATA[<p>我上传到CSDN审核不通过…可能是天朝又加强版权管制了, 只能上传到自己的博客了.</p><p>﻿### 一、IDEA破解</p><h5 id="1-先上链接："><a href="#1-先上链接：" class="headerlink" title="1. 先上链接："></a>1. 先上链接：</h5><pre><code class="java">//IDEA的官方下载地址https://download.jetbrains.com/idea/ideaIU-2019.2.4.exe//破解包的下载地址https://www.lanzous.com/i6ido6h</code></pre><p><img src="https://s2.ax1x.com/2020/02/06/1yQFud.png" alt="1yQFud.png"></p><h5 id="2-放的位置"><a href="#2-放的位置" class="headerlink" title="2. 放的位置"></a>2. 放的位置</h5><ul><li><p>将破解包放置某个地方，复制绝对路径，本人还是以前一样放置于安装目录<code>/bin</code>  （地址自己清楚即可个人建议）</p></li><li><p>打开<code>c盘--用户--（对应用户的名字及计算机名字）</code>–找到   <code>.IntelliJIdea2019.2</code>   文件夹  即可</p></li><li><p>打开config</p></li><li><p>编辑   idea64.exe.vmoptions  最后一行添加</p></li></ul><pre><code class="java">//括号内是你的破解包内的绝对地址填写你自己的-javaagent:【D:\develop\IntelliJ IDEA 2019.2.4\bin\jetbrains-agent.jar】</code></pre><h5 id="3-打开IDEA"><a href="#3-打开IDEA" class="headerlink" title="3. 打开IDEA"></a>3. 打开IDEA</h5><blockquote><p>和以前的一样了，打开 idea 配置请选择  <code>Activation Cod</code>e 将破解包中 Activation_Code内的码复制到文本框即可<br><img src="https://s2.ax1x.com/2020/02/06/1yQPjH.png" alt="1yQPjH.png"></p></blockquote><h3 id="二、结束"><a href="#二、结束" class="headerlink" title="二、结束"></a>二、结束</h3><p><img src="https://s2.ax1x.com/2020/02/06/1yQCge.png" alt="1yQCge.png"></p><pre><code class="java">如若侵权， 请版主删除谢谢！</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;我上传到CSDN审核不通过…可能是天朝又加强版权管制了, 只能上传到自己的博客了.&lt;/p&gt;
-&lt;p&gt;﻿### 一、IDEA破解&lt;/p&gt;
-&lt;h5 id=&quot;1-先上链接：&quot;&gt;&lt;a href=&quot;#1-先上链接：&quot; class=&quot;headerlink&quot; title=&quot;1. 先上链接：
-      
-    
-    </summary>
-    
-    
-      <category term="其他" scheme="http://wsuo.top/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="破解" scheme="http://wsuo.top/tags/%E7%A0%B4%E8%A7%A3/"/>
     
   </entry>
   
